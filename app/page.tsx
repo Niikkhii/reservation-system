@@ -25,7 +25,7 @@ export default function HomePage() {
     try {
 
       const response = await fetch(
-        "http://localhost:3000/api/products"
+        "/api/products"
       );
 
       const data = await response.json();
@@ -42,7 +42,7 @@ export default function HomePage() {
     try {
 
       const response = await fetch(
-        "http://localhost:3000/api/reservations"
+        "/api/reservations"
       );
 
       const data = await response.json();
@@ -65,7 +65,7 @@ export default function HomePage() {
       setLoading(true);
 
       const response = await fetch(
-        "http://localhost:3000/api/reservations",
+        "/api/reservations",
         {
           method: "POST",
 
@@ -110,7 +110,7 @@ export default function HomePage() {
     if (!reservation) return;
 
     await fetch(
-      `http://localhost:3000/api/reservations/${reservation.id}/confirm`,
+      `/api/reservations/${reservation.id}/confirm`,
       {
         method: "POST",
       }
@@ -128,7 +128,7 @@ export default function HomePage() {
     if (!reservation) return;
 
     await fetch(
-      `http://localhost:3000/api/reservations/${reservation.id}/release`,
+      `/api/reservations/${reservation.id}/release`,
       {
         method: "POST",
       }
