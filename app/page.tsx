@@ -169,7 +169,7 @@ export default function HomePage() {
         </h1>
 
         <p className="text-2xl text-slate-600 mb-12">
-          Reserve inventory across warehouses in real-time
+          Reserve inventory across warehouses instantly
         </p>
 
         {reservation && (
